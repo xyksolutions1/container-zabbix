@@ -350,7 +350,7 @@ zabbix_configure_web_frontend() {
     if [ -n "${SSO_SETTINGS}" ] ; then
         sso_settings="\$SSO['SETTINGS'] = [ ${SSO_SETTINGS} ];"
     fi
-    write_file "${NGINX_WEBROOT}"/conf/zabbix.conf.php <<EOF
+    write_file "${NGINX_SITE_ZABBIX_WEBROOT}"/conf/zabbix.conf.php <<EOF
 <?php
 // Zabbix GUI configuration file.
 global \$DB;

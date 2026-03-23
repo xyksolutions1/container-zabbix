@@ -37,6 +37,7 @@ case "${ZABBIX_MODE,,}" in
         _container_build_env " \
                                 10-nginx/ENABLE_NGINX=TRUE \
                                 10-nginx/NGINX_SITE_ENABLED=zabbix \
+                                10-nginx/NGINX_SITE_ZABBIX_WEBROOT=/www/zabbix/ \
                                 20-php-fpm/ENABLE_PHPFPM=TRUE \
                                 20-php-fpm/PHP_ENABLE_CREATE_SAMPLE_PHP=FALSE \
                                 20-php-fpm/PHP_MODULE_ENABLE_LDAP=TRUE \

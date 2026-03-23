@@ -18,7 +18,7 @@ LABEL \
         org.opencontainers.image.licenses="MIT"
 
 ARG \
-    ZABBIX_VERSION="7.4.7" \
+    ZABBIX_VERSION="7.4.8" \
     ZABBIX_REPO_URL="https://github.com/zabbix/zabbix"
 
 COPY CHANGELOG.md /usr/src/container/CHANGELOG.md
@@ -30,6 +30,12 @@ ENV \
     IMAGE_REPO_URL="https://github.com/nfrastack/container-zabbix/"
 
 RUN echo "" && \
+    #BUILD_ENV=" \
+    #            10-nginx/NGINX_SITE_ENABLED=zabbix \
+    #            10-nginx/NGINX_SITE_ZABBIX_WEBROOT=/www/zabbix/" \
+    #          " \
+    #          && \
+    #\
     ZABBIX_BUILD_DEPS_ALPINE=" \
                                 alpine-sdk \
                                 autoconf \
