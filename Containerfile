@@ -89,6 +89,7 @@ RUN echo "" && \
     \
     source /container/base/functions/container/build && \
     container_build_log image && \
+    create_user zabbix 10051 zabbix 10051 /var/lib/zabbix && \
     package update && \
     package upgrade && \
     package install \
@@ -98,7 +99,7 @@ RUN echo "" && \
     \
     php-ext prepare && \
     php-ext reset && \
-    php-ext enable core && \
+    #php-ext enable core && \
     mkdir -p \
             /etc/zabbix \
             /usr/lib/zabbix/alertscripts \
@@ -179,6 +180,7 @@ RUN echo "" && \
                 database/sqlite3 \
             /container/data/zabbix-server/sql \
     && \
+    mkdir -p /www/zabbix && \
     mv ui /www/zabbix && \
     chown --quiet -R zabbix:root \
                        /etc/zabbix/ \
