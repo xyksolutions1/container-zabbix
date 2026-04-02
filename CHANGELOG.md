@@ -1,3 +1,13 @@
+## 3.5.1 2026-04-02 <code at nfastack dot com>
+
+   ### Added
+      - Add safetynets for installation to proceed
+      - Zabbix 7.4.8
+
+   ### Changed
+      - Fix frontend startup issues with nginx:8.x.x base image
+
+
 ## 3.5.0 2026-02-23 <code at nfastack dot com>
 
    ### Added
