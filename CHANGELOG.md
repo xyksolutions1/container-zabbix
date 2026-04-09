@@ -1,3 +1,9 @@
+## 3.5.2 2026-04-09 <code at nfastack dot com>
+
+   ### Added
+      - Zabbix 7.4.9
+
+
 ## 3.5.1 2026-04-02 <code at nfastack dot com>
 
    ### Added
