@@ -5,16 +5,16 @@
 ARG \
     BASE_IMAGE
 
-FROM ${BASE_IMAGE}
+FROM docker.io/xyksolutions1/container-base:latest
 
 LABEL \
         org.opencontainers.image.title="Zabbix" \
         org.opencontainers.image.description="Containerized Monitoring Platform" \
-        org.opencontainers.image.url="https://hub.docker.com/r/nfrastack/zabbix" \
-        org.opencontainers.image.documentation="https://github.com/nfrastack/container-zabbix/blob/main/README.md" \
-        org.opencontainers.image.source="https://github.com/nfrastack/container-zabbix.git" \
-        org.opencontainers.image.authors="Nfrastack <code@nfrastack.com>" \
-        org.opencontainers.image.vendor="Nfrastack <https://www.nfrastack.com>" \
+        org.opencontainers.image.url="https://hub.docker.com/r/xyksolutions1/zabbix" \
+        org.opencontainers.image.documentation="https://github.com/xyksolutions1/container-zabbix/blob/main/README.md" \
+        org.opencontainers.image.source="https://github.com/xyksolutions1/container-zabbix.git" \
+        org.opencontainers.image.authors="xyksolutions1" \
+        org.opencontainers.image.vendor="xyksolutions1" \
         org.opencontainers.image.licenses="MIT"
 
 ARG \
@@ -26,8 +26,8 @@ COPY LICENSE /usr/src/container/LICENSE
 COPY README.md /usr/src/container/README.md
 
 ENV \
-    IMAGE_NAME="nfrastack/zabbix" \
-    IMAGE_REPO_URL="https://github.com/nfrastack/container-zabbix/"
+    IMAGE_NAME="xyksolutions1/zabbix" \
+    IMAGE_REPO_URL="https://github.com/xyksolutions1/container-zabbix/"
 
 RUN echo "" && \
     ZABBIX_BUILD_DEPS_ALPINE=" \
